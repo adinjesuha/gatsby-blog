@@ -1,11 +1,12 @@
 import React from "react"
 
 import "../styles/global-styles.scss"
+import Header from "./header/header"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <header>Header</header>
+      <Header />
       <div
         style={{
           margin: `0 auto`,
