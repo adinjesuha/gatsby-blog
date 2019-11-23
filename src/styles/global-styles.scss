@@ -1,3 +1,25 @@
 @charset "utf-8";
+@import '../styles//fonts.scss';
 
 @import "~bulma/bulma.sass";
+
+button{
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  &:focus{
+    outline: transparent;
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $serif;
+}
+
+.logo {
+  font-family: $serif;
+}

@@ -11,7 +11,7 @@ const Header = () => {
       <div className="header__container">
         <nav className="c-navbar">
           <div className="c-navbar__brand">
-            <Link to="/">MDXBlog</Link>
+            <Link to="/" className="logo">MDXBlog</Link>
           </div>
           <button className="c-navbar__toggle" aria-expanded={toggle} onClick={() => {setToggle(!toggle)}}>
             <span className="c-navbar__toggle--icon"/>
@@ -34,7 +34,7 @@ const Header = () => {
           <div className="mobile-nav">
             <div className="mobile-nav__items"><Link to="/">Design</Link></div>    
             <div className="mobile-nav__items"><Link to="/">Inspiration</Link></div>    
-            <div className="mobile-nav__items"><Link to="/">Web development</Link></div>    
+            <div className="mobile-nav__items"><Link to="/">Web development</Link></div>
           </div>
         </div>
       </div>
