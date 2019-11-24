@@ -2,12 +2,12 @@ import React from "react"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout/layout"
-import Blog from "../components/blog/blog"
+import BlogList from "../components/blogList/blogList"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <Blog />
+    <SEO title="Blog" />
+    <BlogList />
   </Layout>
 )
 

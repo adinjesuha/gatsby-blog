@@ -1,0 +1,40 @@
+@import '../styles/breakpoints.scss';
+
+.content-blog{
+  font-size: 22px;
+  line-height: 1.45455;
+  margin: 0 auto;
+  padding: 70px 0 74px;
+  max-width: 754px;
+  * + h1, 
+  * + h2, 
+  * + h3,
+  * + h4,  
+  * + h5{
+    margin: 30px 0;
+    margin-top: 72px;
+    font-size: 34px;
+    font-weight: 700;
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  &__image{
+    margin: 38px 0;
+  }
+  @media(min-width: $tablet){
+    &__image{
+      margin: 70px 0;
+      max-height: 700px;
+      overflow: hidden;
+      &.big{
+        width: calc(100vw - 30px);
+        max-width: 1140px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
