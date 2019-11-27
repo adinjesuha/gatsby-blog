@@ -29,6 +29,8 @@ const Image = ({ imgName }) => {
     <Img
       fluid={image.node.fluid}
       style={{ position: "relative", overflow: "hidden" }}
+      objectFit="cover"
+      objectPosition="50% 50%"
     />
   )
 }
