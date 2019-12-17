@@ -9,8 +9,14 @@ $navbar-height: 64px;
   left: 0;
   width: 100%;
   background: #fff;
-  box-shadow: 0 4px 16px 0 rgba(44, 50, 65, 0.08);
   z-index: 100;
+  transition: box-shadow 0.3s ease;
+  border: solid #E9EAEC;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-width: 0 0 1px 0;
   &__container{
     padding-right: 15px;
     padding-left: 15px;
@@ -24,6 +30,16 @@ $navbar-height: 64px;
       justify-content: space-between;
       align-items: center;
       min-height: $navbar-height;
+      .logo{
+        color: hsl(0, 0%, 21%);
+        font-size: 1.6rem;
+        span:nth-child(1){
+          margin-right: 10px;
+          padding-right: 10px;
+          border: solid #E9EAEC;
+          border-width: 0 1px 0 0;
+        }
+      }
       &__nav{
         display: none;
         &--item{

@@ -1,12 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `MDX Blog`,
+    description: `Gatsby MDX Blog template`,
+    author: `@adinjesuha`,
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `adinjesuha`
+      }
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

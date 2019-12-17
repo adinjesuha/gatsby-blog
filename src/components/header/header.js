@@ -1,17 +1,22 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {Link} from 'gatsby'
 
 import './header.scss'
 
 const Header = () => {
-  const [ toggle, setToggle ] = useState(false);
+  const [ toggle, setToggle ] = useState(false)
+
   const classNames = toggle ? 'header__collapse show' : 'header__collapse'
+
   return (
     <header className="header">
       <div className="header__container">
         <nav className="c-navbar">
           <div className="c-navbar__brand">
-            <Link to="/" className="logo">MDXBlog</Link>
+            <Link to="/" className="logo">
+              <span>MDX</span>
+              <span>Blog</span>
+            </Link>
           </div>
           <button className="c-navbar__toggle" aria-expanded={toggle} onClick={() => {setToggle(!toggle)}}>
             <span className="c-navbar__toggle--icon"/>

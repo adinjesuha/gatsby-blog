@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 import Image from '../image'
 import './card.scss'
 
-const Card = ({frontmatter, featured, small}) => {
-  const {slug, author, title, excerpt, image} = frontmatter
+const Card = ({featured, small, ...props}) => {
+  const {slug, author, title, excerpt, image, tags} = props
   let classNames;
   if(featured){
     classNames = 'c-card featured'
@@ -24,7 +24,7 @@ const Card = ({frontmatter, featured, small}) => {
       {featured ? (
         <div className="c-card__content">
           <div className="c-card__content--meta">
-            <span>Featured Article</span>
+            <span>Featured Article | {tags}</span>
           </div>
           <h1 className="title is-1 ">
             <Link to={slug}>{title}</Link>
@@ -43,7 +43,7 @@ const Card = ({frontmatter, featured, small}) => {
       ) : (
         <div className="c-card__content">
           <div className="c-card__content--meta">
-            <span>Recipes</span>
+            <span>{tags}</span>
           </div>
           <h2 className="title is-4">
             <Link to={slug}>{title}</Link>

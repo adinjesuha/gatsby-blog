@@ -1,45 +1,26 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
 
-import './blogList.scss'
+import useBlog from '../../hooks/use-blog'
 import Card from './card'
+import './blogList.scss'
 
 const BlogList = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMdx {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              excerpt
-              author
-              slug
-              image
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const posts = data.allMdx.edges
-  const featuredPost = posts[0].node
+  const posts = useBlog()
+  const featuredPost = posts[0]
   return (
     <div className="blog">
       <Card {...featuredPost} featured/>
       <div className="columns">
-        {posts.slice(0).slice(1, 3).map( ({node})=> (
-          <div className="column is-6" key={node.id}>
-            <Card {...node}/>
+        {posts.slice(0).slice(1, 3).map( post => (
+          <div className="column is-6" key={post.id}>
+            <Card {...post}/>
           </div>
         ))}
       </div>
       <div className="columns">
-        {posts.slice(3).map( ({node})=> (
-          <div className="column is-4" key={node.id}>
-            <Card {...node} small/>
+        {posts.slice(3).map( post => (
+          <div className="column is-4" key={post.id}>
+            <Card {...post} small/>
           </div>
         ))}
       </div>
