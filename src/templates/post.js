@@ -64,7 +64,7 @@ const PostTemplate = ({ data: { mdx: post } }) => {
               </div>
               <div className="user__info">
                 <div className="user__info--name">{author}</div>
-                <div className="user__info--meta">, Founder at Nice, Very nice</div>
+                <div className="user__info--meta">, Front end developer at Outer Space</div>
               </div>
             </div>
           </footer>
