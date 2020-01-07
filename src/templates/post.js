@@ -76,7 +76,7 @@ const PostTemplate = ({ data: { mdx: post } }) => {
         <p>Does that involve including keywords in your meta tags? Yes, partially. However, it’s not always totally necessary, and its only part of the puzzle—a small one, at that.</p>
         <p>Did we miss any cool on‐page SEO tips in this guide? Let us know in the comments.</p>
         <div className="content-blog__image">
-          <Image imgName="post-1.jpeg"/>
+          <Image imgName="post-1.jpg"/>
           <figcaption><strong>Little widget.</strong> We have designed, coded, and animated every component.</figcaption>
         </div>
         <p>To figure out which skills employers value most, take a look at the macro trends affecting work as well as the micro trends affecting your discipline.</p>
@@ -88,12 +88,12 @@ const PostTemplate = ({ data: { mdx: post } }) => {
         </ol>
         <div className="author-blog">
           <div className="author-blog__avatar">
-            <Image imgName="avatar.jpeg"/>
+            <Image imgName="avatar.jpg"/>
           </div>
           <div className="author-blog__profile">
             <div className="author-blog__profile--label">Written by</div>
             <div className="author-blog__profile--author">{author}</div>
-            <p className="author-blog__profile--about">Product designer, entrepreneur from beautiful California. Help companies growing sales through design, marketing.</p>
+            <p className="author-blog__profile--about">Front-end developer, JAMStack lover and UI  designer, entrepreneur from beautiful Honduras. Help companies growing sales through design.</p>
           </div>
         </div>
         <Disqus config={disqusConfig} />

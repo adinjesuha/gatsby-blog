@@ -32,7 +32,7 @@ const Card = ({featured, small, ...props}) => {
           <p className="is-size-4">{excerpt}</p>
           <div className="c-card__content--user">
             <div className="avatar">
-              <Image imgName="avatar.jpeg"/>
+              <Image imgName="avatar.jpg"/>
             </div>
             <div className="info">
               <span>{author}</span>
